@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProductScreenController">
+   <children>
+      <VBox alignment="CENTER" layoutX="14.0" layoutY="100.0" prefHeight="200.0" prefWidth="260.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="40.0" text="ID">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Auto Gen - Disabled" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="40.0" text="Name">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nameField" prefWidth="140.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="40.0" text="Inv">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="invField" prefWidth="70.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="40.0" text="Price">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="priceCostField" prefWidth="70.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="40.0" text="Max">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="maxField" prefWidth="70.0" />
+                  <Label prefWidth="40.0" text="Min">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="minField" prefWidth="70.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="286.0" layoutY="36.0" prefHeight="450.0" prefWidth="500.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#searchOutProductButtonPushed" prefWidth="60.0" text="Search">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="partSearchField" />
+               </children>
+            </HBox>
+            <TableView fx:id="outProductTable" prefHeight="115.0" prefWidth="400.0">
+              <columns>
+                <TableColumn fx:id="outPartIdColumn" prefWidth="100.0" text="Part ID" />
+                <TableColumn fx:id="outPartNameColumn" prefWidth="100.0" text="Part Name" />
+                  <TableColumn fx:id="outInventoryLevelColumn" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="outPricePerUnitColumn" prefWidth="100.0" text="Price per Unit" />
+              </columns>
+            </TableView>
+            <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="400.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addButtonPushed" prefWidth="60.0" text="Add">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="inProductTable" prefHeight="115.0" prefWidth="400.0">
+              <columns>
+                <TableColumn fx:id="inPartIdColumn" prefWidth="100.0" text="Part ID" />
+                <TableColumn fx:id="inPartNameColumn" prefWidth="100.0" text="Part Name" />
+                  <TableColumn fx:id="inInventoryLevelColumn" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="inPricePerUnitColumn" prefWidth="100.0" text="Price per Unit" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="60.0" text="Delete" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#saveButtonPushed" prefWidth="60.0" text="Save">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonPushed" prefWidth="60.0" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding>
+      </VBox>
+      <Label layoutX="40.0" layoutY="46.0" text="Add Product">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

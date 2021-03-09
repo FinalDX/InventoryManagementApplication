@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartScreenController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="350.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="350.0">
+               <children>
+                  <Label text="Add Part">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="inHouseRadioButton" mnemonicParsing="false" onAction="#radioButtonChanged" text="In-House">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </RadioButton>
+                  <RadioButton fx:id="outsourcedRadioButton" mnemonicParsing="false" onAction="#radioButtonChanged" text="Outsourced">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="90.0" text="ID">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Auto Gen - Disabled">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="90.0" text="Name">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nameField" prefWidth="120.0" promptText="Part Name">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="90.0" text="Inv">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="invField" prefWidth="120.0" promptText="Inventory">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="90.0" text="Price/Cost">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="priceCostField" prefWidth="120.0" promptText="Price/Cost">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="350.0">
+               <children>
+                  <Label prefWidth="90.0" text="Max">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="maxField" prefWidth="60.0" promptText="Max">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefWidth="30.0" text="Min">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="minField" prefWidth="60.0" promptText="Min" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="350.0">
+               <children>
+                  <Label fx:id="radioButtonLabel" prefWidth="90.0" text="Company Name">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="radioField" prefWidth="120.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#saveButtonPushed" prefWidth="60.0" text="Save">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#cancelButtonPushed" prefWidth="60.0" text="Cancel">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
